@@ -1,0 +1,107 @@
+{
+  "name": "popov/on-demand",
+  "description": "At the reception on record",
+  "license": "MIT",
+  "keywords": [
+    "framework",
+    "zf2"
+  ],
+
+  "require": {
+    "php": ">=5.6",
+    "zendframework/zendframework": "~2.5",
+    "zendframework/zend-form": "2.9.0",
+    "zendframework/zend-developer-tools": "@stable",
+    "zendframework/zftool": "dev-master",
+    "doctrine/doctrine-module": "0.8.0",
+    "doctrine/doctrine-orm-module": "@stable",
+    "doctrine/annotations": "@stable",
+    "doctrine/migrations": "@stable",
+    "oro/doctrine-extensions": "dev-master",
+    "gedmo/doctrine-extensions": "dev-master",
+    
+    "leafo/scssphp": "0.6.5",
+    "widmogrod/zf2-assetic-module": "~1.6",
+    "twbs/bootstrap-sass": "^3.3",
+
+    "thadafinser/zfc-datagrid": "dev-master",
+    "components/jquery": "~2.2",
+    "components/jqueryui": "~1.12",
+    "components/bootstrap-datetimepicker": 
+    
+    "agerecompany/zfc-block": "dev-master",
+    "agerecompany/zfc-data-grid-plugin": "dev-master",
+    "agerecompany/zfc-data-grid": "0.1.1",
+    "agerecompany/zfc-translator": "dev-master",
+    "agerecompany/zfc-menu": "dev-master",
+
+    "popov/zfc-current": "dev-master",
+    "popov/zfc-simpler": "dev-master",
+    "popov/zfc-core": "dev-master",
+    "popov/zfc-entity": "dev-master",
+    "popov/zfc-user": "dev-master",
+    "popov/zfc-form": "dev-master",
+    "popov/zfc-layout": "dev-master",
+    "popov/zfc-grid": "dev-master",
+    "popov/zfc-tab": "dev-master" 
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/agerecompany/zfc-data-grid-plugin"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/agerecompany/zfc-data-grid"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/agerecompany/zfc-block"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/agerecompany/zfc-menu"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/popovserhii/ZfcDatagrid"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/popovserhii/zfc-core"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/popovserhii/zfc-entity"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/popovserhii/zfc-user"
+    },  
+    {
+      "type": "vcs",
+      "url": "https://github.com/popovserhii/zfc-form"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/popovserhii/zfc-layout"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/popovserhii/zfc-grid"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/popovserhii/zfc-tab"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7",
+    "mockery/mockery": "dev-master",
+    "phing/phing": "3.0.x-dev"
+  }
+}
