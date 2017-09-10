@@ -30,44 +30,277 @@ $form->prepare();
 			<div class="box-body">
                 <?= $this->form(null, null)->openTag($form) ?>
                 <?php /** @var \Popov\Inquiry\Form\InquiryFieldset */ ?>
-				<!--<fieldset>-->
-                <?php foreach ($form->get('inquiry') as $key => $elementOrFieldset) : ?>
+                <?php $fieldset = $form->get('inquiry'); ?>
 
-	                <?php if ($elementOrFieldset instanceof \Zend\Form\FieldsetInterface) : ?>
-                        <?php //\Zend\Debug\Debug::dump($key); die(__METHOD__);/**/?>
+                <?= $this->formRow($fieldset->get('id')) ?>
 
-                                <?php /*<legend><?= $this->formLabel($form->get('supplier')->get($key)) ?></legend>*/ ?>
-                                <?php foreach ($elementOrFieldset as $subElementOrFieldset) : ?>
-			                <div class="form-group">
-                                    <?php if ($subElementOrFieldset instanceof \Zend\Form\Element\Hidden) : ?>
-                                        <?= $this->formRow($subElementOrFieldset) ?>
-                                    <?php else: ?>
-                                        <?= $this->formLabel($subElementOrFieldset) ?>
-										<div class="col-sm-9">
-                                            <?= $this->formElement($subElementOrFieldset) ?>
-										</div>
-                                        <?= $this->formElementErrors($subElementOrFieldset) ?>
-                                    <?php endif; ?>
-			                </div>
-                                <?php endforeach;?>
-                        <?php /**/ ?>
-                    <?php else : ?>
-		                <div class="form-group">
+				<fieldset>
+					<legend>Personal Details</legend>
+					<div class="form-group">
+						<?php $element = $fieldset->get('firstName'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('lastName'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('gender'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('maritalStatus'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('idCard'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('passportCode'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('passportNumber'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('passportIssued'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('birthedAt'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('birthedIn'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('nationality'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+				</fieldset>
 
-	                        <?php if ($elementOrFieldset instanceof \Zend\Form\Element\Hidden) : ?>
-                                <?= $this->formRow($elementOrFieldset) ?>
-                            <?php else: ?>
-                                    <?= $this->formLabel($elementOrFieldset) ?>
-					                <div class="col-sm-9">
-                                        <?= $this->formElement($elementOrFieldset) ?>
-					                </div>
-                                    <?= $this->formElementErrors($elementOrFieldset) ?>
-			                <?php endif; ?>
-		                </div>
-                    <?php endif; ?>
-                <?php endforeach;?>
-				<!--</fieldset>-->
-                <?//= $this->formCollection($supplier->get('contractor')) ?>
+				<fieldset>
+					<legend>Communication Details</legend>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('phone'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('email'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+
+					<div class="form-group">
+						<label class="col-sm-2 control-label">Home Address</label>
+					</div>
+					<div class="form-group">
+						<?php $element = $fieldset->get('street'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+						<?php $element = $fieldset->get('city'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+						<?php $element = $fieldset->get('municipality'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+						<?php $element = $fieldset->get('postCode'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+				</fieldset>
+
+
+				<fieldset>
+					<legend>Parents/Guardian Personal Details</legend>
+                    <?php $guardian = $fieldset->get('guardian'); ?>
+					<div class="form-group">
+                        <?php $element = $guardian->get('fullName'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $guardian->get('email'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $guardian->get('phone'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $guardian->get('profession'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>Prospective Applicants Academic Background</legend>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('secondaryEducation'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('secondarySchoolName'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('typeOfEducation'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('secondaryYearOfGraduation'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('schoolAddress'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('schoolWebsite'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>Tertiary Education</legend>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('universityName'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('levelOfStudy'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('programmeOfStudy'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('tertiaryYearOfGraduation'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>Extracurricular Activity</legend>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('honorsAndDistinctions'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('schoolActivities'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('communityService'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('schoolActivities'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('employment'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<legend>University Studies</legend>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('academicAreasOfInterest'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('countriesInterestedForStudies'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('comment'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
+				</fieldset>
 
 				<div class="box-footer">
                     <?= $this->formElement($form->get('submit'))?>

@@ -124,7 +124,7 @@ class InquiryFieldset extends Fieldset implements InputFilterProviderInterface, 
             ],
             'attributes' => [
                 'class' => 'form-control',
-                'placeholder' => 'Enter passport number...',
+                'placeholder' => 'Enter details...',
             ],
         ]);
 

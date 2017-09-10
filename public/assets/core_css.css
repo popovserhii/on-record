@@ -157,10 +157,8 @@ span.red {
 h3 small {
   color: #333; }
 
-fieldset {
-  display: inline-block; }
-  fieldset + .btn, fieldset + .button {
-    margin-left: 30px; }
+fieldset + .btn, fieldset + .button {
+  margin-left: 30px; }
 
 .disabled, *[disabled], .form-control.disabled, input[type="text"].disabled, input[type="date"].disabled, input[type="number"].disabled, select.disabled, textarea.disabled, .form-control.disabled:hover, input[type="text"].disabled:hover, input[type="date"].disabled:hover, input[type="number"].disabled:hover, select.disabled:hover, textarea.disabled:hover, .form-control.disabled:focus, input[type="text"].disabled:focus, input[type="date"].disabled:focus, input[type="number"].disabled:focus, select.disabled:focus, textarea.disabled:focus, .form-control.disabled:active, input[type="text"].disabled:active, input[type="date"].disabled:active, input[type="number"].disabled:active, select.disabled:active, textarea.disabled:active, .form-control[disabled], input[type="text"][disabled], input[type="date"][disabled], input[type="number"][disabled], select[disabled], textarea[disabled] {
   background: #c9cbce !important;
