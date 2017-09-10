@@ -28,14 +28,19 @@ class HelloListener implements ListenerAggregateInterface
         $sharedEventManager = $events->getSharedManager(); // shared events manager
         $this->listeners[] = $sharedEventManager->attach(HelloController::class, 'first.post', function (Event $e) {
             $sm = $this->getServiceLocator();
-            $config = $sm->get('Config')['sms'];
             $item = $e->getTarget();
             if ($item instanceof First) {
+                $config = $sm->get('Config')['sms'];
+
+                $request = $sm->get('Request');
+                $serverUrl = $request ->getUri()->getScheme() . '://' . $request ->getUri()->getHost();
+
                 $client = new Client($config['options']['username'], $config['options']['secret_key']);
+                $message = sprintf('Hey, thank you for your call. Please fill the form %s/inquiry/form', $serverUrl);
 
                 $client->send(
                     substr($item->getPhone(), 3),
-                    'Hey, thank you for your call. Please fill the form www.example.com/form'
+                    $message
                 );
 
             }
