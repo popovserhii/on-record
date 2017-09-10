@@ -1,0 +1,79 @@
+<?php
+/**
+ * The MIT License (MIT)
+ * Copyright (c) 2017 Serhii Popov
+ * This source file is subject to The MIT License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * https://opensource.org/licenses/MIT
+ *
+ * @category Popov
+ * @package Popov_Hello
+ * @author Serhii Popov <popow.sergiy@gmail.com>
+ * @license https://opensource.org/licenses/MIT The MIT License (MIT)
+ */
+
+$form->setAttribute('action', $this->url('default/id', [
+    'controller' => $this->current('route')->getParam('controller'),
+    'action' => $this->current('route')->getParam('action'),
+    'id' => $this->current('route')->getParam('id', 0),
+]));
+
+$form->setAttribute('class','form-horizontal');
+$form->prepare();
+?>
+<div class="row">
+	<!-- left column -->
+	<div class="col-md-12">
+		<!-- general form elements -->
+		<div class="box box-primary">
+			<div class="box-body">
+                <?= $this->form(null, null)->openTag($form) ?>
+                <?php /** @var \Popov\Inquiry\Form\InquiryFieldset */ ?>
+				<!--<fieldset>-->
+                <?php foreach ($form->get('inquiry') as $key => $elementOrFieldset) : ?>
+
+	                <?php if ($elementOrFieldset instanceof \Zend\Form\FieldsetInterface) : ?>
+                        <?php //\Zend\Debug\Debug::dump($key); die(__METHOD__);/**/?>
+
+                                <?php /*<legend><?= $this->formLabel($form->get('supplier')->get($key)) ?></legend>*/ ?>
+                                <?php foreach ($elementOrFieldset as $subElementOrFieldset) : ?>
+			                <div class="form-group">
+                                    <?php if ($subElementOrFieldset instanceof \Zend\Form\Element\Hidden) : ?>
+                                        <?= $this->formRow($subElementOrFieldset) ?>
+                                    <?php else: ?>
+                                        <?= $this->formLabel($subElementOrFieldset) ?>
+										<div class="col-sm-9">
+                                            <?= $this->formElement($subElementOrFieldset) ?>
+										</div>
+                                        <?= $this->formElementErrors($subElementOrFieldset) ?>
+                                    <?php endif; ?>
+			                </div>
+                                <?php endforeach;?>
+                        <?php /**/ ?>
+                    <?php else : ?>
+		                <div class="form-group">
+
+	                        <?php if ($elementOrFieldset instanceof \Zend\Form\Element\Hidden) : ?>
+                                <?= $this->formRow($elementOrFieldset) ?>
+                            <?php else: ?>
+                                    <?= $this->formLabel($elementOrFieldset) ?>
+					                <div class="col-sm-9">
+                                        <?= $this->formElement($elementOrFieldset) ?>
+					                </div>
+                                    <?= $this->formElementErrors($elementOrFieldset) ?>
+			                <?php endif; ?>
+		                </div>
+                    <?php endif; ?>
+                <?php endforeach;?>
+				<!--</fieldset>-->
+                <?//= $this->formCollection($supplier->get('contractor')) ?>
+
+				<div class="box-footer">
+                    <?= $this->formElement($form->get('submit'))?>
+				</div>
+                <?= $this->form()->closeTag() ?>
+			</div>
+		</div>
+	</div>
+</div>
