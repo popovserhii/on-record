@@ -150,7 +150,7 @@ class InquiryController extends AbstractActionController
         //$request = $this->getRequest();
         $route = $this->getEvent()->getRouteMatch();
 
-        if ('0' !== $route->getParam('id')) {
+        if ($route->getParam('id')) {
             $this->redirect()->toRoute('default', [
                 'controller' => $route->getParam('controller'),
                 'action' => $route->getParam('action'),
