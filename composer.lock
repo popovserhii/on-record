@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "db78e56a0ab9271f978e6abe1daf04d7",
+    "content-hash": "8b87ebb7e00028bbb9ea8af7eea3ad06",
     "packages": [
         {
             "name": "agerecompany/zfc-block",
@@ -42,16 +42,16 @@
         },
         {
             "name": "agerecompany/zfc-data-grid",
-            "version": "0.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/agerecompany/zfc-data-grid.git",
-                "reference": "bc54ad6eea72747f453b5e200662113420d005cb"
+                "reference": "0aeb31e3afc4c83fa0f6ee7de07f4abef288a59e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agerecompany/zfc-data-grid/zipball/bc54ad6eea72747f453b5e200662113420d005cb",
-                "reference": "bc54ad6eea72747f453b5e200662113420d005cb",
+                "url": "https://api.github.com/repos/agerecompany/zfc-data-grid/zipball/0aeb31e3afc4c83fa0f6ee7de07f4abef288a59e",
+                "reference": "0aeb31e3afc4c83fa0f6ee7de07f4abef288a59e",
                 "shasum": ""
             },
             "require": {
@@ -86,7 +86,7 @@
                 "source": "https://github.com/agerecompany/zfc-data-grid/tree/master",
                 "issues": "https://github.com/agerecompany/zfc-data-grid/issues"
             },
-            "time": "2016-12-14T20:26:48+00:00"
+            "time": "2017-06-28 11:26:10"
         },
         {
             "name": "agerecompany/zfc-data-grid-plugin",
@@ -2391,12 +2391,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/cyta.git",
-                "reference": "7f590a87a403e9180df6d27cf4008b3a8365d3b9"
+                "reference": "0038f9defc10cc4a420f74eae9c11b513fb11b15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/cyta/zipball/7f590a87a403e9180df6d27cf4008b3a8365d3b9",
-                "reference": "7f590a87a403e9180df6d27cf4008b3a8365d3b9",
+                "url": "https://api.github.com/repos/popovserhii/cyta/zipball/0038f9defc10cc4a420f74eae9c11b513fb11b15",
+                "reference": "0038f9defc10cc4a420f74eae9c11b513fb11b15",
                 "shasum": ""
             },
             "require": {
@@ -2428,7 +2428,7 @@
                 "source": "https://github.com/popovserhii/cyta/tree/master",
                 "issues": "https://github.com/popovserhii/cyta/issues"
             },
-            "time": "2017-09-09 18:20:27"
+            "time": "2017-09-10 16:05:04"
         },
         {
             "name": "popov/zfc-core",
@@ -2436,12 +2436,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-core.git",
-                "reference": "1a8a786ef9bb6654951508534b4de28832bf16b5"
+                "reference": "eaa5fb16b76cdc4d8084ad28bbdffc2c05e3504b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-core/zipball/1a8a786ef9bb6654951508534b4de28832bf16b5",
-                "reference": "1a8a786ef9bb6654951508534b4de28832bf16b5",
+                "url": "https://api.github.com/repos/popovserhii/zfc-core/zipball/eaa5fb16b76cdc4d8084ad28bbdffc2c05e3504b",
+                "reference": "eaa5fb16b76cdc4d8084ad28bbdffc2c05e3504b",
                 "shasum": ""
             },
             "require": {
@@ -2471,7 +2471,7 @@
                 "source": "https://github.com/popovserhii/zfc-core/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-core/issues"
             },
-            "time": "2017-09-08 17:45:26"
+            "time": "2017-09-10 16:06:22"
         },
         {
             "name": "popov/zfc-current",
@@ -2479,12 +2479,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-current.git",
-                "reference": "4c95cf16f30fb86dac6c20f8cb8ae1dd97d640e8"
+                "reference": "cdb161516a9cfd01a6a3f204784d6acedbebf988"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-current/zipball/4c95cf16f30fb86dac6c20f8cb8ae1dd97d640e8",
-                "reference": "4c95cf16f30fb86dac6c20f8cb8ae1dd97d640e8",
+                "url": "https://api.github.com/repos/popovserhii/zfc-current/zipball/cdb161516a9cfd01a6a3f204784d6acedbebf988",
+                "reference": "cdb161516a9cfd01a6a3f204784d6acedbebf988",
                 "shasum": ""
             },
             "require": {
@@ -2516,7 +2516,7 @@
                 "source": "https://github.com/popovserhii/zfc-current/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-current/issues"
             },
-            "time": "2017-09-08 18:13:51"
+            "time": "2017-09-10 16:06:45"
         },
         {
             "name": "popov/zfc-entity",
@@ -2524,12 +2524,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-entity.git",
-                "reference": "505b10e9fd28fe7ca9da7ae43d3cdfd852a80c4b"
+                "reference": "54ec7aaf2376d1ffa0a07e2bc96738b67ccb8796"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-entity/zipball/505b10e9fd28fe7ca9da7ae43d3cdfd852a80c4b",
-                "reference": "505b10e9fd28fe7ca9da7ae43d3cdfd852a80c4b",
+                "url": "https://api.github.com/repos/popovserhii/zfc-entity/zipball/54ec7aaf2376d1ffa0a07e2bc96738b67ccb8796",
+                "reference": "54ec7aaf2376d1ffa0a07e2bc96738b67ccb8796",
                 "shasum": ""
             },
             "require": {
@@ -2560,7 +2560,7 @@
                 "source": "https://github.com/popovserhii/zfc-entity/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-entity/issues"
             },
-            "time": "2017-09-08 08:16:44"
+            "time": "2017-09-10 16:27:05"
         },
         {
             "name": "popov/zfc-form",
@@ -2568,12 +2568,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-form.git",
-                "reference": "9faee594af9cc6f360c3ae7de2cd8c8e5ff18a47"
+                "reference": "d288263116220383e0598d250d1b2903f38d5376"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-form/zipball/9faee594af9cc6f360c3ae7de2cd8c8e5ff18a47",
-                "reference": "9faee594af9cc6f360c3ae7de2cd8c8e5ff18a47",
+                "url": "https://api.github.com/repos/popovserhii/zfc-form/zipball/d288263116220383e0598d250d1b2903f38d5376",
+                "reference": "d288263116220383e0598d250d1b2903f38d5376",
                 "shasum": ""
             },
             "require": {
@@ -2604,7 +2604,7 @@
                 "source": "https://github.com/popovserhii/zfc-form/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-form/issues"
             },
-            "time": "2017-09-08 17:45:04"
+            "time": "2017-09-10 16:07:08"
         },
         {
             "name": "popov/zfc-grid",
@@ -2656,12 +2656,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-layout.git",
-                "reference": "67e286ad9a4444466f042324a783853371750fa8"
+                "reference": "7971ec31ecaa96485956d3ec1ff738bdb7e21cb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-layout/zipball/67e286ad9a4444466f042324a783853371750fa8",
-                "reference": "67e286ad9a4444466f042324a783853371750fa8",
+                "url": "https://api.github.com/repos/popovserhii/zfc-layout/zipball/7971ec31ecaa96485956d3ec1ff738bdb7e21cb6",
+                "reference": "7971ec31ecaa96485956d3ec1ff738bdb7e21cb6",
                 "shasum": ""
             },
             "require": {
@@ -2692,7 +2692,7 @@
                 "source": "https://github.com/popovserhii/zfc-layout/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-layout/issues"
             },
-            "time": "2017-09-08 08:29:50"
+            "time": "2017-09-11 16:57:44"
         },
         {
             "name": "popov/zfc-role",
@@ -2700,12 +2700,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-role.git",
-                "reference": "c798879595eb14da2066ab35c4f62cc0f48c67d9"
+                "reference": "3c32ed0424e11a9936230e976bf651cbcd515122"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-role/zipball/c798879595eb14da2066ab35c4f62cc0f48c67d9",
-                "reference": "c798879595eb14da2066ab35c4f62cc0f48c67d9",
+                "url": "https://api.github.com/repos/popovserhii/zfc-role/zipball/3c32ed0424e11a9936230e976bf651cbcd515122",
+                "reference": "3c32ed0424e11a9936230e976bf651cbcd515122",
                 "shasum": ""
             },
             "require": {
@@ -2727,7 +2727,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "ZF2 role managment module with prebuild UI",
+            "description": "ZF2 role management module with prebuild UI",
             "keywords": [
                 "role managment",
                 "zf2"
@@ -2736,7 +2736,7 @@
                 "source": "https://github.com/popovserhii/zfc-role/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-role/issues"
             },
-            "time": "2017-09-10 07:57:56"
+            "time": "2017-09-11 16:58:29"
         },
         {
             "name": "popov/zfc-simpler",
@@ -2830,12 +2830,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-user.git",
-                "reference": "a1e6cbc320acca74a7017cf729af71ecd72522a8"
+                "reference": "8460bd0be6487f19ac580714e469b3ef073fdddf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-user/zipball/a1e6cbc320acca74a7017cf729af71ecd72522a8",
-                "reference": "a1e6cbc320acca74a7017cf729af71ecd72522a8",
+                "url": "https://api.github.com/repos/popovserhii/zfc-user/zipball/8460bd0be6487f19ac580714e469b3ef073fdddf",
+                "reference": "8460bd0be6487f19ac580714e469b3ef073fdddf",
                 "shasum": ""
             },
             "require": {
@@ -2857,7 +2857,7 @@
                     "role": "Developer"
                 }
             ],
-            "description": "ZF2 user managment module with prebuild UI",
+            "description": "ZF2 user management module with prebuild UI",
             "keywords": [
                 "user managment",
                 "zf2"
@@ -2866,7 +2866,7 @@
                 "source": "https://github.com/popovserhii/zfc-user/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-user/issues"
             },
-            "time": "2017-09-08 07:49:52"
+            "time": "2017-09-11 17:11:37"
         },
         {
             "name": "psr/cache",
@@ -7818,6 +7818,7 @@
         "thadafinser/zfc-datagrid": 20,
         "agerecompany/zfc-block": 20,
         "agerecompany/zfc-data-grid-plugin": 20,
+        "agerecompany/zfc-data-grid": 20,
         "agerecompany/zfc-translator": 20,
         "agerecompany/zfc-menu": 20,
         "popov/zfc-current": 20,

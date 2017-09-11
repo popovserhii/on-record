@@ -34,7 +34,7 @@
 
     "agerecompany/zfc-block": "dev-master",
     "agerecompany/zfc-data-grid-plugin": "dev-master",
-    "agerecompany/zfc-data-grid": "0.1.1",
+    "agerecompany/zfc-data-grid": "dev-master",
     "agerecompany/zfc-translator": "dev-master",
     "agerecompany/zfc-menu": "dev-master",
     "popov/zfc-current": "dev-master",
