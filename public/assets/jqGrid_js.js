@@ -1530,11 +1530,9 @@ f=a(this).children(a(this).data("items")).attr("draggable","enable"===e);return 
 g,h,f=a(this).children(d.items),i=a("<"+(/^ul|ol$/i.test(this.tagName)?"li":/^tbody$/i.test(this.tagName)?"tr":"div")+' class="sortable-placeholder '+d.placeholderClass+'">').html("&nbsp;");f.find(d.handle).mousedown(function(){g=!0}).mouseup(function(){g=!1}),a(this).data("items",d.items),c=c.add(i),d.connectWith&&a(d.connectWith).add(this).data("connectWith",d.connectWith),f.attr("draggable","true").on("dragstart.h5s",function(c){if(d.handle&&!g)return!1;g=!1;var
 e=c.originalEvent.dataTransfer;e.effectAllowed="move",e.setData("Text","dummy"),h=(b=a(this)).addClass("sortable-dragging").index()}).on("dragend.h5s",function(){b&&(b.removeClass("sortable-dragging").show(),c.detach(),h!==b.index()&&b.parent().trigger("sortupdate",{item:b,startindex:h,endindex:b.index()}),b=null)}).not("a[href], img").on("selectstart.h5s",function(){return this.dragDrop&&this.dragDrop(),!1}).end().add([this,i]).on("dragover.h5s dragenter.h5s drop.h5s",function(e){return f.is(b)||d.connectWith===a(b).parent().data("connectWith")?"drop"===e.type?(e.stopPropagation(),c.filter(":visible").after(b),b.trigger("dragend.h5s"),!1):(e.preventDefault(),e.originalEvent.dataTransfer.dropEffect="move",f.is(this)?(d.forcePlaceholderSize&&i.height(b.outerHeight()),b.hide(),a(this)[i.index()<a(this).index()?"after":"before"](i),c.not(i).detach()):c.is(this)||a(this).children(d.items).length||(c.detach(),a(this).append(i)),!1):!0})})}});
 /**
- * jqGrid Russian Translation v1.0 02.07.2009 (based on translation by Alexey Kanaev v1.1 21.01.2009, http://softcore.com.ru)
- * Sergey Dyagovchenko
- * http://d.sumy.ua
- * Tony Tomov
- * http://www.guriddo.net
+ * jqGrid English Translation
+ * Tony Tomov tony@trirand.com
+ * http://trirand.com/blog/ 
  * Dual licensed under the MIT and GPL licenses:
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.gnu.org/licenses/gpl.html
@@ -1558,134 +1556,175 @@ $.jgrid = $.jgrid || {};
 if(!$.jgrid.hasOwnProperty("regional")) {
 	$.jgrid.regional = [];
 }
-$.jgrid.regional["ru"] = {
+$.jgrid.regional["en"] = {
 	defaults : {
-		recordtext: "Просмотр {0} - {1} из {2}",
-		emptyrecords: "Нет записей для просмотра",
-		loadtext: "Загрузка...",
-		pgtext : "Стр. {0} из {1}",
-		savetext: "Сохранения...",
-		pgfirst : "Первая",
-		pglast : "Последняя",
-		pgnext : "Следующая",
-		pgprev : "Предыдущая",
-		pgrecs : "Записей на стр.",
-		showhide: "Показать/Скрыть таблицу",
+		recordtext: "View {0} - {1} of {2}",
+		emptyrecords: "No records to view",
+		loadtext: "Loading...",
+		savetext: "Saving...",
+		pgtext : "Page {0} of {1}",
+		pgfirst : "First Page",
+		pglast : "Last Page",
+		pgnext : "Next Page",
+		pgprev : "Previous Page",
+		pgrecs : "Records per Page",
+		showhide: "Toggle Expand Collapse Grid",
 		// mobile
-		pagerCaption : "Грид::Параметры страницы",
-		pageText : "Страница:",
-		recordPage : "Записей на стр.",
-		nomorerecs : "Нет больше записей...",
-		scrollPullup: "Потяните, чтобы загрузить более...",
-		scrollPulldown : "Потяните вниз чтобы обновить...",
-		scrollRefresh : "Отпустите, чтобы обновить..."
+		pagerCaption : "Grid::Page Settings",
+		pageText : "Page:",
+		recordPage : "Records per Page",
+		nomorerecs : "No more records...",
+		scrollPullup: "Pull up to load more...",
+		scrollPulldown : "Pull down to refresh...",
+		scrollRefresh : "Release to refresh..."
 	},
 	search : {
-		caption: "Поиск...",
-		Find: "Найти",
-		Reset: "Сброс",
-		odata: [{ oper:'eq', text:"равно"},{ oper:'ne', text:"не равно"},{ oper:'lt', text:"меньше"},{ oper:'le', text:"меньше или равно"},{ oper:'gt', text:"больше"},{ oper:'ge', text:"больше или равно"},{ oper:'bw', text:"начинается с"},{ oper:'bn', text:"не начинается с"},{ oper:'in', text:"находится в"},{ oper:'ni', text:"не находится в"},{ oper:'ew', text:"заканчивается на"},{ oper:'en', text:"не заканчивается на"},{ oper:'cn', text:"содержит"},{ oper:'nc', text:"не содержит"},{ oper:'nu', text:"равно NULL"},{ oper:'nn', text:"не равно NULL"}, {oper:'bt', text:'между'}],
-		groupOps: [	{ op: "AND", text: "все" }, { op: "OR", text: "любой" }],
-		operandTitle : "Выбрать поисковую операцию.",
-		resetTitle : "Сбросить поиск"
+		caption: "Search...",
+		Find: "Find",
+		Reset: "Reset",
+		odata: [{ oper:'eq', text:'equal'},{ oper:'ne', text:'not equal'},{ oper:'lt', text:'less'},{ oper:'le', text:'less or equal'},{ oper:'gt', text:'greater'},{ oper:'ge', text:'greater or equal'},{ oper:'bw', text:'begins with'},{ oper:'bn', text:'does not begin with'},{ oper:'in', text:'is in'},{ oper:'ni', text:'is not in'},{ oper:'ew', text:'ends with'},{ oper:'en', text:'does not end with'},{ oper:'cn', text:'contains'},{ oper:'nc', text:'does not contain'},{ oper:'nu', text:'is null'},{ oper:'nn', text:'is not null'}, {oper:'bt', text:'between'}],
+		groupOps: [{ op: "AND", text: "all" },{ op: "OR",  text: "any" }],
+		operandTitle : "Click to select search operation.",
+		resetTitle : "Reset Search Value"
 	},
 	edit : {
-		addCaption: "Добавить запись",
-		editCaption: "Редактировать запись",
-		bSubmit: "Сохранить",
-		bCancel: "Отмена",
-		bClose: "Закрыть",
-		saveData: "Данные были измененны! Сохранить изменения?",
-		bYes : "Да",
-		bNo : "Нет",
-		bExit : "Отмена",
+		addCaption: "Add Record",
+		editCaption: "Edit Record",
+		bSubmit: "Submit",
+		bCancel: "Cancel",
+		bClose: "Close",
+		saveData: "Data has been changed! Save changes?",
+		bYes : "Yes",
+		bNo : "No",
+		bExit : "Cancel",
 		msg: {
-			required:"Поле является обязательным",
-			number:"Пожалуйста, введите правильное число",
-			minValue:"значение должно быть больше либо равно",
-			maxValue:"значение должно быть меньше либо равно",
-			email: "некорректное значение e-mail",
-			integer: "Пожалуйста, введите целое число",
-			date: "Пожалуйста, введите правильную дату",
-			url: "неверная ссылка. Необходимо ввести префикс ('http://' или 'https://')",
-			nodefined : " не определено!",
-			novalue : " возвращаемое значение обязательно!",
-			customarray : "Пользовательская функция должна возвращать массив!",
-			customfcheck : "Пользовательская функция должна присутствовать в случаи пользовательской проверки!"
+			required:"Field is required",
+			number:"Please, enter valid number",
+			minValue:"value must be greater than or equal to ",
+			maxValue:"value must be less than or equal to",
+			email: "is not a valid e-mail",
+			integer: "Please, enter valid integer value",
+			date: "Please, enter valid date value",
+			url: "is not a valid URL. Prefix required ('http://' or 'https://')",
+			nodefined : " is not defined!",
+			novalue : " return value is required!",
+			customarray : "Custom function should return array!",
+			customfcheck : "Custom function should be present in case of custom checking!"
+			
 		}
 	},
 	view : {
-		caption: "Просмотр записи",
-		bClose: "Закрыть"
+		caption: "View Record",
+		bClose: "Close"
 	},
 	del : {
-		caption: "Удалить",
-		msg: "Удалить выбранную запись(и)?",
-		bSubmit: "Удалить",
-		bCancel: "Отмена"
+		caption: "Delete",
+		msg: "Delete selected record(s)?",
+		bSubmit: "Delete",
+		bCancel: "Cancel"
 	},
 	nav : {
-		edittext: " ",
-		edittitle: "Редактировать выбранную запись",
-		addtext:" ",
-		addtitle: "Добавить новую запись",
-		deltext: " ",
-		deltitle: "Удалить выбранную запись",
-		searchtext: " ",
-		searchtitle: "Найти записи",
+		edittext: "",
+		edittitle: "Edit selected row",
+		addtext:"",
+		addtitle: "Add new row",
+		deltext: "",
+		deltitle: "Delete selected row",
+		searchtext: "",
+		searchtitle: "Find records",
 		refreshtext: "",
-		refreshtitle: "Обновить таблицу",
-		alertcap: "Внимание",
-		alerttext: "Пожалуйста, выберите запись",
+		refreshtitle: "Reload Grid",
+		alertcap: "Warning",
+		alerttext: "Please, select row",
 		viewtext: "",
-		viewtitle: "Просмотреть выбранную запись",
+		viewtitle: "View selected row",
 		savetext: "",
-		savetitle: "Сохранить запись",
+		savetitle: "Save row",
 		canceltext: "",
-		canceltitle : "Отмена сохранения",
-		selectcaption : "Действия..."
+		canceltitle : "Cancel row editing",
+		selectcaption : "Actions..."
 	},
 	col : {
-		caption: "Показать/скрыть столбцы",
-		bSubmit: "Сохранить",
-		bCancel: "Отмена"	
+		caption: "Select columns",
+		bSubmit: "Ok",
+		bCancel: "Cancel"
 	},
 	errors : {
-		errcap : "Ошибка",
-		nourl : "URL не установлен",
-		norecords: "Нет записей для обработки",
-		model : "Число полей не соответствует числу столбцов таблицы!"
+		errcap : "Error",
+		nourl : "No url is set",
+		norecords: "No records to process",
+		model : "Length of colNames <> colModel!"
 	},
 	formatter : {
-		integer : {thousandsSeparator: " ", defaultValue: '0'},
-		number : {decimalSeparator:",", thousandsSeparator: " ", decimalPlaces: 2, defaultValue: '0,00'},
-		currency : {decimalSeparator:",", thousandsSeparator: " ", decimalPlaces: 2, prefix: "", suffix:"", defaultValue: '0,00'},
+		integer : {thousandsSeparator: ",", defaultValue: '0'},
+		number : {decimalSeparator:".", thousandsSeparator: ",", decimalPlaces: 2, defaultValue: '0.00'},
+		currency : {decimalSeparator:".", thousandsSeparator: ",", decimalPlaces: 2, prefix: "", suffix:"", defaultValue: '0.00'},
 		date : {
 			dayNames:   [
-				"Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб",
-				"Воскресение", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"
+				"Sun", "Mon", "Tue", "Wed", "Thr", "Fri", "Sat",
+				"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
 			],
 			monthNames: [
-				"Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек",
-				"Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+				"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+				"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
 			],
 			AmPm : ["am","pm","AM","PM"],
 			S: function (j) {return j < 11 || j > 13 ? ['st', 'nd', 'rd', 'th'][Math.min((j - 1) % 10, 3)] : 'th';},
 			srcformat: 'Y-m-d',
-			newformat: 'd.m.Y',
+			newformat: 'n/j/Y',
 			parseRe : /[#%\\\/:_;.,\t\s-]/,
 			masks : {
+				// see http://php.net/manual/en/function.date.php for PHP format used in jqGrid
+				// and see http://docs.jquery.com/UI/Datepicker/formatDate
+				// and https://github.com/jquery/globalize#dates for alternative formats used frequently
+				// one can find on https://github.com/jquery/globalize/tree/master/lib/cultures many
+				// information about date, time, numbers and currency formats used in different countries
+				// one should just convert the information in PHP format
 				ISO8601Long:"Y-m-d H:i:s",
 				ISO8601Short:"Y-m-d",
-				ShortDate: "n.j.Y",
-				LongDate: "l, F d, Y",
-				FullDateTime: "l, F d, Y G:i:s",
-				MonthDay: "F d",
-				ShortTime: "G:i",
-				LongTime: "G:i:s",
+				// short date:
+				//    n - Numeric representation of a month, without leading zeros
+				//    j - Day of the month without leading zeros
+				//    Y - A full numeric representation of a year, 4 digits
+				// example: 3/1/2012 which means 1 March 2012
+				ShortDate: "n/j/Y", // in jQuery UI Datepicker: "M/d/yyyy"
+				// long date:
+				//    l - A full textual representation of the day of the week
+				//    F - A full textual representation of a month
+				//    d - Day of the month, 2 digits with leading zeros
+				//    Y - A full numeric representation of a year, 4 digits
+				LongDate: "l, F d, Y", // in jQuery UI Datepicker: "dddd, MMMM dd, yyyy"
+				// long date with long time:
+				//    l - A full textual representation of the day of the week
+				//    F - A full textual representation of a month
+				//    d - Day of the month, 2 digits with leading zeros
+				//    Y - A full numeric representation of a year, 4 digits
+				//    g - 12-hour format of an hour without leading zeros
+				//    i - Minutes with leading zeros
+				//    s - Seconds, with leading zeros
+				//    A - Uppercase Ante meridiem and Post meridiem (AM or PM)
+				FullDateTime: "l, F d, Y g:i:s A", // in jQuery UI Datepicker: "dddd, MMMM dd, yyyy h:mm:ss tt"
+				// month day:
+				//    F - A full textual representation of a month
+				//    d - Day of the month, 2 digits with leading zeros
+				MonthDay: "F d", // in jQuery UI Datepicker: "MMMM dd"
+				// short time (without seconds)
+				//    g - 12-hour format of an hour without leading zeros
+				//    i - Minutes with leading zeros
+				//    A - Uppercase Ante meridiem and Post meridiem (AM or PM)
+				ShortTime: "g:i A", // in jQuery UI Datepicker: "h:mm tt"
+				// long time (with seconds)
+				//    g - 12-hour format of an hour without leading zeros
+				//    i - Minutes with leading zeros
+				//    s - Seconds, with leading zeros
+				//    A - Uppercase Ante meridiem and Post meridiem (AM or PM)
+				LongTime: "g:i:s A", // in jQuery UI Datepicker: "h:mm:ss tt"
 				SortableDateTime: "Y-m-d\\TH:i:s",
 				UniversalSortableDateTime: "Y-m-d H:i:sO",
-				YearMonth: "F, Y"
+				// month with year
+				//    Y - A full numeric representation of a year, 4 digits
+				//    F - A full textual representation of a month
+				YearMonth: "F, Y" // in jQuery UI Datepicker: "MMMM, yyyy"
 			},
 			reformatAfterEdit : false,
 			userLocalTime : false
@@ -1697,16 +1736,16 @@ $.jgrid.regional["ru"] = {
 		idName : 'id'
 	},
 	colmenu : {
-		sortasc : "Сортировка по возрастанию",
-		sortdesc : "Сортировка по убыванию",
-		columns : "Колонны",
-		filter : "Филтрировать",
-		grouping : "Группа по",
-		ungrouping : "Разгруппировать",
-		searchTitle : "Строки со значениями",
-		freeze : "Закрепление",
-		unfreeze : "Отмена закрепление",
-		reorder : "Переместить в порядок"
+		sortasc : "Sort Ascending",
+		sortdesc : "Sort Descending",
+		columns : "Columns",
+		filter : "Filter",
+		grouping : "Group By",
+		ungrouping : "Ungroup",
+		searchTitle : "Get items with value that:",
+		freeze : "Freeze",
+		unfreeze : "Unfreeze",
+		reorder : "Move to reorder"
 	}
 };
 }));

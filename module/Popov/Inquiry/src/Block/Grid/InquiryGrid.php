@@ -26,6 +26,18 @@ class InquiryGrid extends AbstractGrid implements ObjectManagerAwareInterface
         $grid->setTitle('Inquiry');
         #$grid->setRendererName('jqGrid');
 
+        $rendererOptions = $grid->getToolbarTemplateVariables();
+
+        $rendererOptions['gridFooterRow'] = true;
+        $rendererOptions['navGridDel'] = true;
+        //$rendererOptions['navGridSearch'] = true;
+        //$rendererOptions['inlineNavEdit'] = true;
+        //$rendererOptions['inlineNavAdd'] = true;
+        $rendererOptions['inlineNavCancel'] = true;
+        $rendererOptions['navGridRefresh'] = true;
+
+        $grid->setToolbarTemplateVariables($rendererOptions);
+
         $colId = $this->add([
             'name' => 'Select',
             'construct' => ['id', 'inquiry'],
@@ -71,21 +83,21 @@ class InquiryGrid extends AbstractGrid implements ObjectManagerAwareInterface
             'width' => 2,
         ]);
 
-        #$this->add([
-        #    'name' => 'Action',
-        #    'construct' => ['edit'],
-        #    'label' => ' ',
-        #    'width' => 1,
-        #    'styles' => [[
-        #        'name' => 'BackgroundColor',
-        #        'construct' => [[224, 226, 229]],
-        #    ]],
-        #    'formatters' => [[
-        #        'name' => 'Link',
-        #        'attributes' => ['class' => 'pencil-edit-icon', 'target' => '_blank'],
-        #        'link' => ['href' => '/invoice/view', 'placeholder_column' => $colId]
-        #    ]],
-        #]);
+        $this->add([
+            'name' => 'Action',
+            'construct' => ['edit'],
+            'label' => ' ',
+            'width' => 1,
+            'styles' => [[
+                'name' => 'BackgroundColor',
+                'construct' => [[224, 226, 229]],
+            ]],
+            'formatters' => [[
+                'name' => 'Link',
+                'attributes' => ['class' => 'pencil-edit-icon', 'target' => '_blank'],
+                'link' => ['href' => '/inquiry/edit', 'placeholder_column' => $colId]
+            ]],
+        ]);
 
         return $this;
     }

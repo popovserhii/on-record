@@ -90,7 +90,7 @@ class InquiryController extends AbstractActionController
         return $productDataGrid->getResponse();
     }
 
-    public function formAction()
+    public function editAction()
     {
         $request = $this->getRequest();
         $route = $this->getEvent()->getRouteMatch();
@@ -98,11 +98,11 @@ class InquiryController extends AbstractActionController
         $fm = $this->getFormElementManager();
 
         /** @var Inquiry $inquiry */
-        /*$first = ($first = $service->find($id = (int) $route->getParam('id')))
-            ? $first
-            : $service->getObjectModel();*/
+        $inquiry = ($inquiry = $service->find($id = (int) $route->getParam('id')))
+            ? $inquiry
+            : $service->getObjectModel();
 
-        $inquiry = $service->getObjectModel();
+        //$inquiry = $service->getObjectModel();
 
         /** @var InquiryForm $form */
         $form = $fm->get(InquiryForm::class);
@@ -132,7 +132,7 @@ class InquiryController extends AbstractActionController
 
                 $this->redirect()->toRoute('default', [
                     'controller' => $route->getParam('controller'),
-                    'action'     => 'thanks',
+                    'action' =>  $route->getParam('action') ? 'index' : 'thanks',
                 ]);
             } else {
                 $msg = 'Form is invalid. Please, check the correctness of the entered data';
@@ -143,6 +143,23 @@ class InquiryController extends AbstractActionController
         return (new ViewModel([
             'form' => $form,
         ]));
+    }
+
+    public function formAction()
+    {
+        //$request = $this->getRequest();
+        $route = $this->getEvent()->getRouteMatch();
+
+        if ('0' !== $route->getParam('id')) {
+            $this->redirect()->toRoute('default', [
+                'controller' => $route->getParam('controller'),
+                'action' => $route->getParam('action'),
+            ]);
+        }
+
+        $viewModel = $this->editAction();
+
+        return $viewModel;
     }
 
     public function thanksAction()

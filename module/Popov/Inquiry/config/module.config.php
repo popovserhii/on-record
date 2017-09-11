@@ -27,6 +27,7 @@ return [
 
     'service_manager' => [
         'aliases' => [
+            'InquiryService' => Service\InquiryService::class, // only for GridFactory
             'InquiryGrid' => Block\Grid\InquiryGrid::class, // only for GridFactory
         ],
         'invokables' => [

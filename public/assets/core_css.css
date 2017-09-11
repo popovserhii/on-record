@@ -160,7 +160,7 @@ h3 small {
 fieldset + .btn, fieldset + .button {
   margin-left: 30px; }
 
-.disabled, *[disabled], .form-control.disabled, input[type="text"].disabled, input[type="date"].disabled, input[type="number"].disabled, select.disabled, textarea.disabled, .form-control.disabled:hover, input[type="text"].disabled:hover, input[type="date"].disabled:hover, input[type="number"].disabled:hover, select.disabled:hover, textarea.disabled:hover, .form-control.disabled:focus, input[type="text"].disabled:focus, input[type="date"].disabled:focus, input[type="number"].disabled:focus, select.disabled:focus, textarea.disabled:focus, .form-control.disabled:active, input[type="text"].disabled:active, input[type="date"].disabled:active, input[type="number"].disabled:active, select.disabled:active, textarea.disabled:active, .form-control[disabled], input[type="text"][disabled], input[type="date"][disabled], input[type="number"][disabled], select[disabled], textarea[disabled] {
+.disabled, *[disabled], .form-control.disabled, input[type="text"].disabled, input[type="date"].disabled, input[type="number"].disabled, input[type="password"].disabled, select.disabled, textarea.disabled, .form-control.disabled:hover, input[type="text"].disabled:hover, input[type="date"].disabled:hover, input[type="number"].disabled:hover, input[type="password"].disabled:hover, select.disabled:hover, textarea.disabled:hover, .form-control.disabled:focus, input[type="text"].disabled:focus, input[type="date"].disabled:focus, input[type="number"].disabled:focus, input[type="password"].disabled:focus, select.disabled:focus, textarea.disabled:focus, .form-control.disabled:active, input[type="text"].disabled:active, input[type="date"].disabled:active, input[type="number"].disabled:active, input[type="password"].disabled:active, select.disabled:active, textarea.disabled:active, .form-control[disabled], input[type="text"][disabled], input[type="date"][disabled], input[type="number"][disabled], input[type="password"][disabled], select[disabled], textarea[disabled] {
   background: #c9cbce !important;
   color: #404040 !important;
   border-color: #c9cbce !important;
@@ -328,7 +328,7 @@ fieldset + .btn, fieldset + .button {
     height: 13px;
     vertical-align: middle; }
 
-.form-control, input[type="text"], input[type="date"], input[type="number"], select, textarea {
+.form-control, input[type="text"], input[type="date"], input[type="number"], input[type="password"], select, textarea {
   border-radius: 0;
   border: 2px solid #e6e9ea;
   color: #404040;
@@ -337,18 +337,18 @@ fieldset + .btn, fieldset + .button {
   width: 100%;
   padding: 6px 12px;
   vertical-align: middle; }
-  .form-control[readonly], input[type="text"][readonly], input[type="date"][readonly], input[type="number"][readonly], select[readonly], textarea[readonly] {
+  .form-control[readonly], input[type="text"][readonly], input[type="date"][readonly], input[type="number"][readonly], input[type="password"][readonly], select[readonly], textarea[readonly] {
     background: transparent;
     border-color: transparent;
     box-shadow: none;
     padding-left: 0;
     font-size: 2.4em;
     color: #2470a9; }
-  .form-control[readonly]:focus, input[type="text"][readonly]:focus, input[type="date"][readonly]:focus, input[type="number"][readonly]:focus, select[readonly]:focus, textarea[readonly]:focus {
+  .form-control[readonly]:focus, input[type="text"][readonly]:focus, input[type="date"][readonly]:focus, input[type="number"][readonly]:focus, input[type="password"][readonly]:focus, select[readonly]:focus, textarea[readonly]:focus {
     border-color: transparent;
     outline: 0;
     box-shadow: none; }
-  .form-control:focus, input[type="text"]:focus, input[type="date"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
+  .form-control:focus, input[type="text"]:focus, input[type="date"]:focus, input[type="number"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
     border-color: #66afe9;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
