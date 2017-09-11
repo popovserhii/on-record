@@ -132,7 +132,7 @@ class InquiryController extends AbstractActionController
 
                 $this->redirect()->toRoute('default', [
                     'controller' => $route->getParam('controller'),
-                    'action' =>  $route->getParam('action') ? 'index' : 'thanks',
+                    'action' =>  ($route->getParam('action') == 'edit') ? 'index' : 'thanks',
                 ]);
             } else {
                 $msg = 'Form is invalid. Please, check the correctness of the entered data';
