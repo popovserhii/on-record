@@ -120,6 +120,12 @@ class Inquiry
 
     /**
      * @var string
+     * @ORM\Column(name="skype", type="string", nullable=true)
+     */
+    private $skype;
+
+    /**
+     * @var string
      * @ORM\Column(name="street", type="string", nullable=true, options={"default":""})
      */
     private $street;

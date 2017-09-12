@@ -118,6 +118,12 @@ $form->prepare();
 						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
                         <?= $this->formElementErrors($element) ?>
 					</div>
+					<div class="form-group">
+                        <?php $element = $fieldset->get('skype'); ?>
+                        <?= $this->formLabel($element) ?>
+						<div class="col-sm-9"><?= $this->formElement($element) ?></div>
+                        <?= $this->formElementErrors($element) ?>
+					</div>
 
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Home Address</label>

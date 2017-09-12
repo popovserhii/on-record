@@ -191,6 +191,18 @@ class InquiryFieldset extends Fieldset implements InputFilterProviderInterface, 
         ]);
 
         $this->add([
+            'name' => 'skype',
+            'options' => [
+                'label' => 'Skype',
+                'label_attributes' => ['class' => 'col-sm-2 control-label'],
+            ],
+            'attributes' => [
+                'class' => 'form-control',
+                'placeholder' => 'Enter skype name...',
+            ],
+        ]);
+
+        $this->add([
             'name' => 'street',
             'options' => [
                 'label' => 'Street',
@@ -526,6 +538,13 @@ class InquiryFieldset extends Fieldset implements InputFilterProviderInterface, 
                             'message' => 'Invalid email address',
                         ],
                     ],
+                ],
+            ],
+            'skype' => [
+                'required' => false,
+                'filters' => [
+                    ['name' => 'StripTags'], // don't forget this one
+                    ['name' => 'StringTrim'],
                 ],
             ],
         ];
