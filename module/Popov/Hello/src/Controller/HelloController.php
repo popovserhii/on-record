@@ -68,29 +68,24 @@ class HelloController extends AbstractActionController
     public function indexAction() {
         /** @var FirstGrid $firstGrid */
         /** @var Datagrid $firstsDataGrid */
-        //$sm = $this->getServiceManager();
-        //$sm = $this->getServiceLocator();
-        //$om = $this->getInquiryService()->getObjectManager();
-        $firstService = $this->getFirstService();
         /** @var FirstService $firstService */
-        //$inquiryService = $sm->get('InquiryGrid');;
-        /** @var \Zend\Mvc\Router\RouteMatch $route */
-        //$route = $this->getEvent()->getRouteMatch();
+        $firstService = $this->getFirstService();
 
-        //$url = ['controller' => $route->getParam('controller'), 'action' => 'products'];
         $inquiries = $firstService->getAllowedFirsts();
 
         $firstGrid = $this->getFirstGrid()->build();
         $productDataGrid = $firstGrid->getDataGrid();
-        //$productDataGrid->setUrl($this->url()->fromRoute($route->getMatchedRouteName(), $url));
         $productDataGrid->setDataSource($inquiries);
-        //$productDataGrid->setDataSource([]);
         $productDataGrid->render();
 
         return $productDataGrid->getResponse();
     }
 
-    public function firstAction()
+    public function firstAction() {
+        return $this->editAction()->setTemplate('popov/hello/edit');
+    }
+
+    public function editAction()
     {
         $request = $this->getRequest();
         $route = $this->getEvent()->getRouteMatch();
@@ -98,11 +93,9 @@ class HelloController extends AbstractActionController
         $fm = $this->getFormElementManager();
 
         /** @var First $first */
-        /*$first = ($first = $service->find($id = (int) $route->getParam('id')))
+        $first = ($first = $service->find($id = (int) $route->getParam('id')))
             ? $first
-            : $service->getObjectModel();*/
-
-        $first = $service->getObjectModel();
+            : $service->getObjectModel();
 
         /** @var FirstForm $form */
         $form = $fm->get(FirstForm::class);
@@ -116,7 +109,7 @@ class HelloController extends AbstractActionController
                 $om->persist($first);
                 $om->flush();
 
-                $this->getEventManager()->trigger('first.post', $first);
+                $this->getEventManager()->trigger($route->getParam('action') . '.post', $first);
 
                 $msg = 'Data have been successfully saved';
                 $this->flashMessenger()->addSuccessMessage($msg);

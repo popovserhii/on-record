@@ -37,6 +37,7 @@ return [
 
     'service_manager' => [
         'aliases' => [
+            'FirstService' => Service\FirstService::class, // only for GridFactory
             'FirstGrid' => Block\Grid\FirstGrid::class, // only for GridFactory
         ],
         'invokables' => [

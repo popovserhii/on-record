@@ -22,6 +22,18 @@ class FirstGrid extends AbstractGrid implements ObjectManagerAwareInterface
     {
         $grid = $this->getDataGrid();
 
+        $rendererOptions = $grid->getToolbarTemplateVariables();
+
+        $rendererOptions['gridFooterRow'] = true;
+        $rendererOptions['navGridDel'] = true;
+        //$rendererOptions['navGridSearch'] = true;
+        //$rendererOptions['inlineNavEdit'] = true;
+        //$rendererOptions['inlineNavAdd'] = true;
+        $rendererOptions['inlineNavCancel'] = true;
+        $rendererOptions['navGridRefresh'] = true;
+
+        $grid->setToolbarTemplateVariables($rendererOptions);
+
         $grid->setId('first');
         $grid->setTitle('First');
         #$grid->setRendererName('jqGrid');
@@ -67,17 +79,24 @@ class FirstGrid extends AbstractGrid implements ObjectManagerAwareInterface
         $this->add([
             'name' => 'Action',
             'construct' => ['edit'],
-            'label' => 'Re-send',
+            'label' => ' ',
             'width' => 1,
             'styles' => [[
                 'name' => 'BackgroundColor',
                 'construct' => [[224, 226, 229]],
             ]],
-            'formatters' => [[
-                'name' => 'Link',
-                'attributes' => ['class' => 'outbox-icon', 'target' => '_blank'],
-                'link' => ['href' => '/hello/again', 'placeholder_column' => $colId]
-            ]],
+            'formatters' => [
+                [
+                    'name' => 'Link',
+                    'attributes' => ['class' => 'pencil-edit-icon', 'target' => '_blank'],
+                    'link' => ['href' => '/hello/edit', 'placeholder_column' => $colId],
+                ],
+                [
+                    'name' => 'Link',
+                    'attributes' => ['class' => 'outbox-icon', 'target' => '_blank'],
+                    'link' => ['href' => '/hello/again', 'placeholder_column' => $colId]
+                ]
+            ],
         ]);
 
         return $this;
