@@ -3,6 +3,7 @@
 namespace Popov\Inquiry\Controller\Factory;
 
 use Interop\Container\ContainerInterface;
+use Dompdf\Dompdf;
 use Popov\Inquiry\Controller\InquiryController;
 use Popov\Inquiry\Service\InquiryService;
 
@@ -18,10 +19,13 @@ class InquiryControllerFactory
             return $sm->get('InquiryGrid');
         };
 
+        $domPdf = new Dompdf();
+        $domPdf->getOptions()->set('isHtml5ParserEnabled', true);
+
         /** @var InquiryService $service */
         $service = $sm->get(InquiryService::class);
 
-        $controller = new InquiryController($fm, $service, $inquiryGridCallback);
+        $controller = new InquiryController($fm, $service, $inquiryGridCallback, $domPdf);
 
         return $controller;
     }

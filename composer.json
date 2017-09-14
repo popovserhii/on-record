@@ -47,7 +47,9 @@
     "popov/zfc-layout": "dev-master",
     "popov/zfc-grid": "dev-master",
     "popov/zfc-tab": "dev-master",
-    "popov/cyta": "dev-master"
+    "popov/zfc-file-upload": "dev-master",
+    "popov/cyta": "dev-master",
+    "dompdf/dompdf": "dev-master"
   },
   "require-dev": {
     "phpunit/phpunit": "^5.7",
@@ -114,6 +116,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/popovserhii/cyta.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/popovserhii/zfc-file-upload.git"
     }
   ],
   "autoload": {

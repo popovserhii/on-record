@@ -45,6 +45,11 @@ class StudentController extends AbstractActionController
         return $this->formElementManager;
     }
 
+    public function fileAction()
+    {
+        return new ViewModel();
+    }
+
     public function firstAction()
     {
         $request = $this->getRequest();

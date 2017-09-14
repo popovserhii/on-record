@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b87ebb7e00028bbb9ea8af7eea3ad06",
+    "content-hash": "b173a212cc80507442ab9cc6863144c4",
     "packages": [
         {
             "name": "agerecompany/zfc-block",
@@ -46,12 +46,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/agerecompany/zfc-data-grid.git",
-                "reference": "0aeb31e3afc4c83fa0f6ee7de07f4abef288a59e"
+                "reference": "8165164e09b720bda565117211b88dda68d21324"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agerecompany/zfc-data-grid/zipball/0aeb31e3afc4c83fa0f6ee7de07f4abef288a59e",
-                "reference": "0aeb31e3afc4c83fa0f6ee7de07f4abef288a59e",
+                "url": "https://api.github.com/repos/agerecompany/zfc-data-grid/zipball/8165164e09b720bda565117211b88dda68d21324",
+                "reference": "8165164e09b720bda565117211b88dda68d21324",
                 "shasum": ""
             },
             "require": {
@@ -86,7 +86,7 @@
                 "source": "https://github.com/agerecompany/zfc-data-grid/tree/master",
                 "issues": "https://github.com/agerecompany/zfc-data-grid/issues"
             },
-            "time": "2017-06-28 11:26:10"
+            "time": "2017-09-11 17:35:47"
         },
         {
             "name": "agerecompany/zfc-data-grid-plugin",
@@ -94,12 +94,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/agerecompany/zfc-data-grid-plugin.git",
-                "reference": "1ce5991caac642c9cf9d835f7468379996014271"
+                "reference": "78d69d6f5154973e0487a1796cdbf91605e0fb3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/agerecompany/zfc-data-grid-plugin/zipball/1ce5991caac642c9cf9d835f7468379996014271",
-                "reference": "1ce5991caac642c9cf9d835f7468379996014271",
+                "url": "https://api.github.com/repos/agerecompany/zfc-data-grid-plugin/zipball/78d69d6f5154973e0487a1796cdbf91605e0fb3b",
+                "reference": "78d69d6f5154973e0487a1796cdbf91605e0fb3b",
                 "shasum": ""
             },
             "require": {
@@ -134,7 +134,7 @@
                 "source": "https://github.com/agerecompany/zfc-data-grid-plugin/tree/master",
                 "issues": "https://github.com/agerecompany/zfc-data-grid-plugin/issues"
             },
-            "time": "2016-12-14 09:46:25"
+            "time": "2017-09-12 17:55:22"
         },
         {
             "name": "agerecompany/zfc-menu",
@@ -1419,6 +1419,68 @@
             "time": "2017-08-19 16:47:32"
         },
         {
+            "name": "dompdf/dompdf",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dompdf/dompdf.git",
+                "reference": "93737b52e513c88b626c5d83ede7dadf4069e6c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dompdf/dompdf/zipball/93737b52e513c88b626c5d83ede7dadf4069e6c6",
+                "reference": "93737b52e513c88b626c5d83ede7dadf4069e6c6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-gd": "*",
+                "ext-mbstring": "*",
+                "phenx/php-font-lib": "0.5.*",
+                "phenx/php-svg-lib": "0.3.*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dompdf\\": "src/"
+                },
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                },
+                {
+                    "name": "Brian Sweeney",
+                    "email": "eclecticgeek@gmail.com"
+                },
+                {
+                    "name": "Gabriel Bull",
+                    "email": "me@gabrielbull.com"
+                }
+            ],
+            "description": "DOMPDF is a CSS 2.1 compliant HTML to PDF converter",
+            "homepage": "https://github.com/dompdf/dompdf",
+            "time": "2017-09-12 02:40:33"
+        },
+        {
             "name": "gedmo/doctrine-extensions",
             "version": "dev-master",
             "source": {
@@ -1787,17 +1849,94 @@
             "time": "2017-07-17 10:34:56"
         },
         {
+            "name": "phenx/php-font-lib",
+            "version": "0.5.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhenX/php-font-lib.git",
+                "reference": "760148820110a1ae0936e5cc35851e25a938bc97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhenX/php-font-lib/zipball/760148820110a1ae0936e5cc35851e25a938bc97",
+                "reference": "760148820110a1ae0936e5cc35851e25a938bc97",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FontLib\\": "src/FontLib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                }
+            ],
+            "description": "A library to read, parse, export and make subsets of different types of font files.",
+            "homepage": "https://github.com/PhenX/php-font-lib",
+            "time": "2017-09-13T16:14:37+00:00"
+        },
+        {
+            "name": "phenx/php-svg-lib",
+            "version": "v0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhenX/php-svg-lib.git",
+                "reference": "a85f7fe9fe08d093a4a8583cdd306b553ff918aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhenX/php-svg-lib/zipball/a85f7fe9fe08d093a4a8583cdd306b553ff918aa",
+                "reference": "a85f7fe9fe08d093a4a8583cdd306b553ff918aa",
+                "shasum": ""
+            },
+            "require": {
+                "sabberworm/php-css-parser": "8.1.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Svg\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Ménager",
+                    "email": "fabien.menager@gmail.com"
+                }
+            ],
+            "description": "A library to read, parse and export to PDF SVG files.",
+            "homepage": "https://github.com/PhenX/php-svg-lib",
+            "time": "2017-05-24T10:07:27+00:00"
+        },
+        {
             "name": "phpdocumentor/reflection-common",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "a046af61c36e9162372f205de091a1cab7340f1c"
+                "reference": "21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/a046af61c36e9162372f205de091a1cab7340f1c",
-                "reference": "a046af61c36e9162372f205de091a1cab7340f1c",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6",
+                "reference": "21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6",
                 "shasum": ""
             },
             "require": {
@@ -1838,7 +1977,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2017-04-30 11:58:12"
+            "time": "2017-09-11 18:02:19"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -2563,6 +2702,51 @@
             "time": "2017-09-10 16:27:05"
         },
         {
+            "name": "popov/zfc-file-upload",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/popovserhii/zfc-file-upload.git",
+                "reference": "327925e6ed2e6ab0b327af49feb1251b3e315042"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/popovserhii/zfc-file-upload/zipball/327925e6ed2e6ab0b327af49feb1251b3e315042",
+                "reference": "327925e6ed2e6ab0b327af49feb1251b3e315042",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "zf-module",
+            "autoload": {
+                "psr-4": {
+                    "Popov\\ZfcFileUpload\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serhii Popov",
+                    "email": "popow.sergiy@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "ZF2 File Uploader",
+            "keywords": [
+                "file",
+                "upload",
+                "zf2"
+            ],
+            "support": {
+                "source": "https://github.com/popovserhii/zfc-file-upload/tree/master",
+                "issues": "https://github.com/popovserhii/zfc-file-upload/issues"
+            },
+            "time": "2017-09-13 11:56:32"
+        },
+        {
             "name": "popov/zfc-form",
             "version": "dev-master",
             "source": {
@@ -3059,6 +3243,50 @@
                 "psr-3"
             ],
             "time": "2016-10-10 12:19:37"
+        },
+        {
+            "name": "sabberworm/php-css-parser",
+            "version": "8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sabberworm/PHP-CSS-Parser.git",
+                "reference": "850cbbcbe7fbb155387a151ea562897a67e242ef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sabberworm/PHP-CSS-Parser/zipball/850cbbcbe7fbb155387a151ea562897a67e242ef",
+                "reference": "850cbbcbe7fbb155387a151ea562897a67e242ef",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sabberworm\\CSS": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphael Schweikert"
+                }
+            ],
+            "description": "Parser for CSS Files written in PHP",
+            "homepage": "http://www.sabberworm.com/blog/2010/6/10/php-css-parser",
+            "keywords": [
+                "css",
+                "parser",
+                "stylesheet"
+            ],
+            "time": "2016-07-19T19:14:21+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -3579,12 +3807,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "a13780e9377e9ad2c11787ed51609b7cdc79999a"
+                "reference": "ed85f121340bfeb8378cf736a1332a505f8382f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/a13780e9377e9ad2c11787ed51609b7cdc79999a",
-                "reference": "a13780e9377e9ad2c11787ed51609b7cdc79999a",
+                "url": "https://api.github.com/repos/symfony/console/zipball/ed85f121340bfeb8378cf736a1332a505f8382f1",
+                "reference": "ed85f121340bfeb8378cf736a1332a505f8382f1",
                 "shasum": ""
             },
             "require": {
@@ -3640,7 +3868,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-09-08 16:59:15"
+            "time": "2017-09-11 21:23:16"
         },
         {
             "name": "symfony/debug",
@@ -3648,12 +3876,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "33f6f36c28f4f280e5c999e556473bc98d8b173f"
+                "reference": "14076792065c98c32c234fbb94da9a478b394281"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/33f6f36c28f4f280e5c999e556473bc98d8b173f",
-                "reference": "33f6f36c28f4f280e5c999e556473bc98d8b173f",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/14076792065c98c32c234fbb94da9a478b394281",
+                "reference": "14076792065c98c32c234fbb94da9a478b394281",
                 "shasum": ""
             },
             "require": {
@@ -3696,7 +3924,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-09-03 14:49:34"
+            "time": "2017-09-12 08:02:51"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -3763,12 +3991,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "9794f948d9af3be0157185051275d78b24d68b92"
+                "reference": "19d5369c0b38820685adeb119e717e292df2b46b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/9794f948d9af3be0157185051275d78b24d68b92",
-                "reference": "9794f948d9af3be0157185051275d78b24d68b92",
+                "url": "https://api.github.com/repos/symfony/process/zipball/19d5369c0b38820685adeb119e717e292df2b46b",
+                "reference": "19d5369c0b38820685adeb119e717e292df2b46b",
                 "shasum": ""
             },
             "require": {
@@ -3804,7 +4032,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2017-08-03 09:34:20"
+            "time": "2017-09-11 21:23:16"
         },
         {
             "name": "symfony/yaml",
@@ -7831,7 +8059,9 @@
         "popov/zfc-layout": 20,
         "popov/zfc-grid": 20,
         "popov/zfc-tab": 20,
+        "popov/zfc-file-upload": 20,
         "popov/cyta": 20,
+        "dompdf/dompdf": 20,
         "mockery/mockery": 20,
         "phing/phing": 20
     },

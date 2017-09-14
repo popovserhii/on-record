@@ -14,14 +14,21 @@
  */
 namespace Popov\Inquiry\Controller;
 
-use Popov\Inquiry\Block\Grid\InquiryGrid;
-use Popov\Inquiry\Model\Inquiry;
+use Dompdf\Dompdf;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use ZfcDatagrid\Datagrid;
+use Popov\ZfcCurrent\Plugin\Current;
+
 use Popov\Inquiry\Service\InquiryService;
 use Popov\Inquiry\Form\InquiryForm;
-use ZfcDatagrid\Datagrid;
+use Popov\Inquiry\Block\Grid\InquiryGrid;
+use Popov\Inquiry\Model\Inquiry;
 
+/**
+ * Class InquiryController
+ * @method Current current($name)
+ */
 class InquiryController extends AbstractActionController
 {
     protected $formElementManager;
@@ -33,11 +40,15 @@ class InquiryController extends AbstractActionController
 
     protected $inquiryGrid;
 
-    public function __construct($formElementManager, $inquiryService, $inquiryGrid)
+    /** @var Dompdf */
+    protected $domPdf;
+
+    public function __construct($formElementManager, $inquiryService, $inquiryGrid, $domPdf)
     {
         $this->formElementManager = $formElementManager;
         $this->inquiryService = $inquiryService;
         $this->inquiryGrid = $inquiryGrid;
+        $this->domPdf = $domPdf;
     }
 
     public function getInquiryService()
@@ -65,15 +76,16 @@ class InquiryController extends AbstractActionController
         return $this->formElementManager;
     }
 
+    public function getDomPdf()
+    {
+        return $this->domPdf;
+    }
+
     public function indexAction() {
         /** @var InquiryGrid $inquiryGrid */
         /** @var Datagrid $inquiriesDataGrid */
-        //$sm = $this->getServiceManager();
-        //$sm = $this->getServiceLocator();
-        //$om = $this->getInquiryService()->getObjectManager();
-        $inquiryService = $this->getInquiryService();
         /** @var InquiryService $inquiryService */
-        //$inquiryService = $sm->get('InquiryGrid');;
+        $inquiryService = $this->getInquiryService();
         /** @var \Zend\Mvc\Router\RouteMatch $route */
         //$route = $this->getEvent()->getRouteMatch();
 
@@ -160,6 +172,43 @@ class InquiryController extends AbstractActionController
         $viewModel = $this->editAction();
 
         return $viewModel;
+    }
+
+    public function pdfAction()
+    {
+        $viewModel = $this->editAction()->setTemplate('popov/inquiry/edit');
+        $viewRender = $this->current('view');
+        $html = $viewRender->render($viewModel);
+
+        $html = str_replace('value=""', 'value="-"', $html);
+        $html = mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8');
+        $html = <<<HTML
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      body { font-family: DejaVu Sans, sans-serif; }
+    </style>
+</head>
+<body>{$html}</body>
+</html>
+HTML;
+
+        // instantiate and use the dompdf class
+        $domPdf = $this->getDomPdf();
+
+        $domPdf->loadHtml($html, 'UTF-8');
+
+        // (Optional) Setup the paper size and orientation
+        $domPdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $domPdf->render();
+
+        // Output the generated PDF to Browser
+        $domPdf->stream('student-' . $this->getEvent()->getRouteMatch()->getParam('id'));
+
+        return false;
     }
 
     public function thanksAction()

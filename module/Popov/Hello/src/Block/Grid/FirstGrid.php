@@ -88,13 +88,13 @@ class FirstGrid extends AbstractGrid implements ObjectManagerAwareInterface
             'formatters' => [
                 [
                     'name' => 'Link',
-                    'attributes' => ['class' => 'pencil-edit-icon', 'target' => '_blank'],
-                    'link' => ['href' => '/hello/edit', 'placeholder_column' => $colId],
+                    'attributes' => ['class' => 'glyphicon glyphicon-send', 'title' => 'Re-send SMS', 'target' => '_blank'],
+                    'link' => ['href' => '/hello/again', 'placeholder_column' => $colId]
                 ],
                 [
                     'name' => 'Link',
-                    'attributes' => ['class' => 'outbox-icon', 'target' => '_blank'],
-                    'link' => ['href' => '/hello/again', 'placeholder_column' => $colId]
+                    'attributes' => ['class' => 'glyphicon glyphicon-pencil', 'title' => 'Edit item', 'target' => '_blank'],
+                    'link' => ['href' => '/hello/edit', 'placeholder_column' => $colId],
                 ]
             ],
         ]);

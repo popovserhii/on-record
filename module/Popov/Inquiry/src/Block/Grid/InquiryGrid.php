@@ -92,11 +92,18 @@ class InquiryGrid extends AbstractGrid implements ObjectManagerAwareInterface
                 'name' => 'BackgroundColor',
                 'construct' => [[224, 226, 229]],
             ]],
-            'formatters' => [[
-                'name' => 'Link',
-                'attributes' => ['class' => 'pencil-edit-icon', 'target' => '_blank'],
-                'link' => ['href' => '/inquiry/edit', 'placeholder_column' => $colId]
-            ]],
+            'formatters' => [
+                [
+                    'name' => 'Link',
+                    'attributes' => ['class' => 'glyphicon glyphicon-save-file', 'target' => '_blank', 'title' => 'PDF'],
+                    'link' => ['href' => '/inquiry/pdf', 'placeholder_column' => $colId],
+                ],
+                [
+                    'name' => 'Link',
+                    'attributes' => ['class' => 'glyphicon glyphicon-pencil', 'target' => '_blank', 'title' => 'Edit item'],
+                    'link' => ['href' => '/inquiry/edit', 'placeholder_column' => $colId],
+                ]
+            ],
         ]);
 
         return $this;
