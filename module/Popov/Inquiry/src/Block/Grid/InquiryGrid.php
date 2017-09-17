@@ -101,7 +101,7 @@ class InquiryGrid extends AbstractGrid implements ObjectManagerAwareInterface
                 [
                     'name' => 'Link',
                     'attributes' => ['class' => 'glyphicon glyphicon-pencil', 'target' => '_blank', 'title' => 'Edit item'],
-                    'link' => ['href' => '/inquiry/edit', 'placeholder_column' => $colId],
+                    'link' => ['href' => '/inquiry/info', 'placeholder_column' => $colId],
                 ]
             ],
         ]);

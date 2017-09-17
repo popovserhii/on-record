@@ -6,4 +6,6 @@ data/cache/*
 !data/cache/.gitkeep
 phpunit.xml
 public/assets/
+public/uploads/
 data/DoctrineORMModule/Proxy/
+data/ZfcDatagrid/

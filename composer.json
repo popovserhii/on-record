@@ -47,6 +47,7 @@
     "popov/zfc-layout": "dev-master",
     "popov/zfc-grid": "dev-master",
     "popov/zfc-tab": "dev-master",
+    "popov/zfc-file": "dev-master",
     "popov/zfc-file-upload": "dev-master",
     "popov/cyta": "dev-master",
     "dompdf/dompdf": "dev-master"
@@ -115,11 +116,15 @@
     },
     {
       "type": "vcs",
-      "url": "https://github.com/popovserhii/cyta.git"
+      "url": "https://github.com/popovserhii/cyta"
     },
     {
       "type": "vcs",
-      "url": "https://github.com/popovserhii/zfc-file-upload.git"
+      "url": "https://github.com/popovserhii/zfc-file-upload"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/popovserhii/zfc-file"
     }
   ],
   "autoload": {

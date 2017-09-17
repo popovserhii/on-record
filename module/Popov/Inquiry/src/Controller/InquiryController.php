@@ -102,6 +102,24 @@ class InquiryController extends AbstractActionController
         return $productDataGrid->getResponse();
     }
 
+    public function infoAction()
+    {
+        $route = $this->getEvent()->getRouteMatch();
+        $params = $route->getParams();
+
+        $params['action'] = 'edit';
+        $editVm = $this->forward()->dispatch($route->getParam('controller'), $params);
+
+        $params['action'] = 'files';
+        $filesVm = $this->forward()->dispatch($route->getParam('controller'), $params);
+
+        $view = (new ViewModel())->setTemplate('tab/switcher');
+        !$editVm || $view->addChild($editVm, 'edit');
+        !$filesVm || $view->addChild($filesVm, 'files');
+
+        return $view;
+    }
+
     public function editAction()
     {
         $request = $this->getRequest();
@@ -154,6 +172,7 @@ class InquiryController extends AbstractActionController
 
         return (new ViewModel([
             'form' => $form,
+            'title' => 'Form'
         ]));
     }
 
@@ -172,6 +191,11 @@ class InquiryController extends AbstractActionController
         $viewModel = $this->editAction();
 
         return $viewModel;
+    }
+
+    public function filesAction()
+    {
+        return (new ViewModel())->setVariable('title', 'Files');
     }
 
     public function pdfAction()

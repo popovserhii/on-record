@@ -47,7 +47,9 @@ return [
 
     'Popov\ZfcEntity',
     'Popov\ZfcForm',
+    'Popov\ZfcFile',
     'Popov\ZfcFileUpload',
+    'Popov\ZfcTab',
 
 
     'Popov\ZfcRole',
