@@ -14,33 +14,31 @@
  */
 namespace Popov\Student;
 
-use Zend\ServiceManager\Factory\InvokableFactory;
-
 return [
-
     'controllers' => [
         'aliases' => [
             'student' => Controller\StudentController::class,
         ],
         'factories' => [
             Controller\StudentController::class => Controller\Factory\StudentControllerFactory::class,
-        ]
+        ],
     ],
-
     'service_manager' => [
+        'aliases' => [
+            'StudentService' => Service\StudentService::class
+        ],
         'invokables' => [
+            Service\StudentService::class => Service\StudentService::class,
             Service\GuardianService::class => Service\GuardianService::class,
         ],
         //'factories' => [],
         'shared' => [],
     ],
-
     'view_manager' => [
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],
     ],
-
     'doctrine' => [
         'driver' => [
             __NAMESPACE__ . '_driver' => [

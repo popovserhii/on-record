@@ -47,6 +47,7 @@
     "popov/zfc-layout": "dev-master",
     "popov/zfc-grid": "dev-master",
     "popov/zfc-tab": "dev-master",
+    "popov/zfc-mail": "dev-master",
     "popov/zfc-file": "dev-master",
     "popov/zfc-file-upload": "dev-master",
     "popov/cyta": "dev-master",
@@ -105,6 +106,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/popovserhii/zfc-grid"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/popovserhii/zfc-mail"
     },
     {
       "type": "vcs",

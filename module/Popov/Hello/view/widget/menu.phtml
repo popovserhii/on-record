@@ -16,18 +16,31 @@
 <div class="sidebar">
 
 		<ul class="level-0">
+			<?php if ($this->user()->isAdmin()) : ?>
 			<li>
 				<a href="/hello/first">First Hello</a>
 				<ul class="level-1">
 					<li><a href="/hello">Hello List</a></li>
 				</ul>
 			</li>
+			<?php endif; ?>
+
 			<li>
+                <?php if ($this->user()->isAdmin()) : ?>
 				<a href="/inquiry">Inquiries</a>
 				<!--<ul class="level-1">
 					<li><a href="/inquiry">List of Inquiries</a></li>
 				</ul>-->
+                <?php else: ?>
+	                <?php $student = $this->module()->getEntityPlugin()
+		                ->getObjectManager()
+		                ->getRepository(\Popov\Student\Model\Student::class)
+		                ->findOneBy(['user' => $this->user()->current()]) ?>
+	                <a href="/inquiry/info/<?= $student->getInquiry()->getId() ?>">Inquiries</a>
+                <?php endif; ?>
+
 			</li>
+
 		</ul>
 
 </div>

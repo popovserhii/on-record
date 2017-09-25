@@ -95,6 +95,11 @@ class InquiryGrid extends AbstractGrid implements ObjectManagerAwareInterface
             'formatters' => [
                 [
                     'name' => 'Link',
+                    'attributes' => ['class' => 'glyphicon glyphicon-transfer', 'target' => '_blank', 'title' => 'Create account'],
+                    'link' => ['href' => '/student/transmit', 'placeholder_column' => $colId],
+                ],
+                [
+                    'name' => 'Link',
                     'attributes' => ['class' => 'glyphicon glyphicon-save-file', 'target' => '_blank', 'title' => 'PDF'],
                     'link' => ['href' => '/inquiry/pdf', 'placeholder_column' => $colId],
                 ],

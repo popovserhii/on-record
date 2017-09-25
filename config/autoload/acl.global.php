@@ -20,5 +20,12 @@ return [
             ['target' => 'inquiry/form', 'access' => Acl::ACCESS_TOTAL],
             ['target' => 'inquiry/thanks', 'access' => Acl::ACCESS_TOTAL],
         ],
+        'student' => [
+            ['target' => 'inquiry/info', 'access' => Acl::ACCESS_TOTAL],
+            ['target' => 'inquiry/edit', 'access' => Acl::ACCESS_TOTAL],
+            ['target' => 'inquiry/files', 'access' => Acl::ACCESS_TOTAL],
+            ['target' => 'file-upload/index', 'access' => Acl::ACCESS_TOTAL],
+            //['target' => 'inquiry/thanks', 'access' => Acl::ACCESS_TOTAL],
+        ],
     ],
 ];

@@ -55,6 +55,8 @@ return [
     'Popov\ZfcRole',
     'Popov\ZfcUser',
 
+    'Popov\ZfcMail',
+
     'Popov\Hello',
     'Popov\Inquiry',
     'Popov\Student',

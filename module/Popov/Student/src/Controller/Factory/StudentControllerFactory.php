@@ -4,7 +4,7 @@ namespace Popov\Student\Controller\Factory;
 
 use Interop\Container\ContainerInterface;
 use Popov\Student\Controller\StudentController;
-use Popov\Student\Service\GuardianService;
+use Popov\Student\Service\StudentService;
 
 class StudentControllerFactory
 {
@@ -14,10 +14,10 @@ class StudentControllerFactory
 
         $fm = $sm->get('FormElementManager');
 
-        /** @var GuardianService $firstService */
-        $firstService = $sm->get(GuardianService::class);
+        /** @var StudentService $studentService */
+        $studentService = $sm->get(StudentService::class);
 
-        $controller = new StudentController($fm, $firstService);
+        $controller = new StudentController($fm, $studentService);
 
         return $controller;
     }

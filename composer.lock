@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f15d408fbba06887e404a1718f3cc4e6",
+    "content-hash": "b2433cf024f4722f9b29f8173450918f",
     "packages": [
         {
             "name": "agerecompany/zfc-block",
@@ -1007,16 +1007,16 @@
         },
         {
             "name": "doctrine/doctrine-orm-module",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineORMModule.git",
-                "reference": "ed027b9ad3e058171bac741aceb6f7dcc4ec6cbc"
+                "reference": "8cb46190022ac71ef644416bd422ce2fb54d4823"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineORMModule/zipball/ed027b9ad3e058171bac741aceb6f7dcc4ec6cbc",
-                "reference": "ed027b9ad3e058171bac741aceb6f7dcc4ec6cbc",
+                "url": "https://api.github.com/repos/doctrine/DoctrineORMModule/zipball/8cb46190022ac71ef644416bd422ce2fb54d4823",
+                "reference": "8cb46190022ac71ef644416bd422ce2fb54d4823",
                 "shasum": ""
             },
             "require": {
@@ -1091,7 +1091,7 @@
                 "orm",
                 "zf"
             ],
-            "time": "2017-08-17T17:20:15+00:00"
+            "time": "2017-09-20T01:06:34+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1348,12 +1348,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "36dc28d43eeacf37faa23cbb441ae226a1fb0ee9"
+                "reference": "24d95796bb27ee06f4687b03c58ecba057be15f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/36dc28d43eeacf37faa23cbb441ae226a1fb0ee9",
-                "reference": "36dc28d43eeacf37faa23cbb441ae226a1fb0ee9",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/24d95796bb27ee06f4687b03c58ecba057be15f9",
+                "reference": "24d95796bb27ee06f4687b03c58ecba057be15f9",
                 "shasum": ""
             },
             "require": {
@@ -1416,7 +1416,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2017-08-19 16:47:32"
+            "time": "2017-09-18 06:52:10"
         },
         {
             "name": "dompdf/dompdf",
@@ -1486,12 +1486,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "3d3bb7cf72e30e05d2e39ea2ee1262e08740867c"
+                "reference": "6db69c8c80bea89d51da430480c3d737c24318bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/3d3bb7cf72e30e05d2e39ea2ee1262e08740867c",
-                "reference": "3d3bb7cf72e30e05d2e39ea2ee1262e08740867c",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/6db69c8c80bea89d51da430480c3d737c24318bf",
+                "reference": "6db69c8c80bea89d51da430480c3d737c24318bf",
                 "shasum": ""
             },
             "require": {
@@ -1556,7 +1556,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2017-09-01 07:52:41"
+            "time": "2017-09-22 14:45:08"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -1798,13 +1798,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/orocrm/doctrine-extensions.git",
-                "reference": "18c7ebecdccd650fa544ac13d0ba2bf72398149e"
+                "url": "https://github.com/oroinc/doctrine-extensions.git",
+                "reference": "cf64d8e1725e4fd3928101a62c0b0bab00006789"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orocrm/doctrine-extensions/zipball/18c7ebecdccd650fa544ac13d0ba2bf72398149e",
-                "reference": "18c7ebecdccd650fa544ac13d0ba2bf72398149e",
+                "url": "https://api.github.com/repos/oroinc/doctrine-extensions/zipball/cf64d8e1725e4fd3928101a62c0b0bab00006789",
+                "reference": "cf64d8e1725e4fd3928101a62c0b0bab00006789",
                 "shasum": ""
             },
             "require": {
@@ -1846,7 +1846,7 @@
                 "postgresql",
                 "type"
             ],
-            "time": "2017-07-17 10:34:56"
+            "time": "2017-09-12 07:26:11"
         },
         {
             "name": "phenx/php-font-lib",
@@ -2389,12 +2389,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "4eba3374803c6c0903145e8940844e6f1d665c07"
+                "reference": "78dcaf0185c3f57fa05f32c89c81f20e1a2a6a29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4eba3374803c6c0903145e8940844e6f1d665c07",
-                "reference": "4eba3374803c6c0903145e8940844e6f1d665c07",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/78dcaf0185c3f57fa05f32c89c81f20e1a2a6a29",
+                "reference": "78dcaf0185c3f57fa05f32c89c81f20e1a2a6a29",
                 "shasum": ""
             },
             "require": {
@@ -2463,7 +2463,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-09-01 08:38:37"
+            "time": "2017-09-25 07:50:32"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2575,12 +2575,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-core.git",
-                "reference": "eaa5fb16b76cdc4d8084ad28bbdffc2c05e3504b"
+                "reference": "7c9653d43a446db8bd0a1b6fcc5e9fd295e027e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-core/zipball/eaa5fb16b76cdc4d8084ad28bbdffc2c05e3504b",
-                "reference": "eaa5fb16b76cdc4d8084ad28bbdffc2c05e3504b",
+                "url": "https://api.github.com/repos/popovserhii/zfc-core/zipball/7c9653d43a446db8bd0a1b6fcc5e9fd295e027e7",
+                "reference": "7c9653d43a446db8bd0a1b6fcc5e9fd295e027e7",
                 "shasum": ""
             },
             "require": {
@@ -2610,7 +2610,7 @@
                 "source": "https://github.com/popovserhii/zfc-core/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-core/issues"
             },
-            "time": "2017-09-10 16:06:22"
+            "time": "2017-09-17 16:25:10"
         },
         {
             "name": "popov/zfc-current",
@@ -2707,12 +2707,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-file.git",
-                "reference": "b50ede5aabb16b5e2351e71e642c44edeaa16550"
+                "reference": "9b5f62e19c5e5b516d5c238b289ca73c8b0b54ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-file/zipball/b50ede5aabb16b5e2351e71e642c44edeaa16550",
-                "reference": "b50ede5aabb16b5e2351e71e642c44edeaa16550",
+                "url": "https://api.github.com/repos/popovserhii/zfc-file/zipball/9b5f62e19c5e5b516d5c238b289ca73c8b0b54ff",
+                "reference": "9b5f62e19c5e5b516d5c238b289ca73c8b0b54ff",
                 "shasum": ""
             },
             "require": {
@@ -2744,7 +2744,7 @@
                 "source": "https://github.com/popovserhii/zfc-file/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-file/issues"
             },
-            "time": "2017-09-17 09:04:16"
+            "time": "2017-09-17 16:26:27"
         },
         {
             "name": "popov/zfc-file-upload",
@@ -2752,12 +2752,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-file-upload.git",
-                "reference": "327925e6ed2e6ab0b327af49feb1251b3e315042"
+                "reference": "7f950e4697a926281842150e764afe3971fefc51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-file-upload/zipball/327925e6ed2e6ab0b327af49feb1251b3e315042",
-                "reference": "327925e6ed2e6ab0b327af49feb1251b3e315042",
+                "url": "https://api.github.com/repos/popovserhii/zfc-file-upload/zipball/7f950e4697a926281842150e764afe3971fefc51",
+                "reference": "7f950e4697a926281842150e764afe3971fefc51",
                 "shasum": ""
             },
             "require": {
@@ -2789,7 +2789,7 @@
                 "source": "https://github.com/popovserhii/zfc-file-upload/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-file-upload/issues"
             },
-            "time": "2017-09-13 11:56:32"
+            "time": "2017-09-17 17:57:17"
         },
         {
             "name": "popov/zfc-form",
@@ -2885,12 +2885,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-layout.git",
-                "reference": "005324181ef299ccf5da0c24112c5195f6910e00"
+                "reference": "100a4053b860b9f53616cd1faa00cec993340929"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-layout/zipball/005324181ef299ccf5da0c24112c5195f6910e00",
-                "reference": "005324181ef299ccf5da0c24112c5195f6910e00",
+                "url": "https://api.github.com/repos/popovserhii/zfc-layout/zipball/100a4053b860b9f53616cd1faa00cec993340929",
+                "reference": "100a4053b860b9f53616cd1faa00cec993340929",
                 "shasum": ""
             },
             "require": {
@@ -2921,7 +2921,51 @@
                 "source": "https://github.com/popovserhii/zfc-layout/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-layout/issues"
             },
-            "time": "2017-09-14 09:32:07"
+            "time": "2017-09-17 16:48:22"
+        },
+        {
+            "name": "popov/zfc-mail",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/popovserhii/zfc-mail.git",
+                "reference": "4a59b3c20b93825f1265434dcbb7d2bdf37d497d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/popovserhii/zfc-mail/zipball/4a59b3c20b93825f1265434dcbb7d2bdf37d497d",
+                "reference": "4a59b3c20b93825f1265434dcbb7d2bdf37d497d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "type": "zf-module",
+            "autoload": {
+                "psr-4": {
+                    "Popov\\ZfcMail\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serhii Popov",
+                    "email": "popow.sergiy@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "ZF2 mail managment module",
+            "keywords": [
+                "mail managment",
+                "zf2"
+            ],
+            "support": {
+                "source": "https://github.com/popovserhii/zfc-mail/tree/master",
+                "issues": "https://github.com/popovserhii/zfc-mail/issues"
+            },
+            "time": "2017-09-08 08:21:15"
         },
         {
             "name": "popov/zfc-role",
@@ -3015,12 +3059,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-tab.git",
-                "reference": "c2cc4fa7e704c839b1c8c28d5959114974104af8"
+                "reference": "e4374f12d69bcbbac234e1cf3bff322008ceb2f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-tab/zipball/c2cc4fa7e704c839b1c8c28d5959114974104af8",
-                "reference": "c2cc4fa7e704c839b1c8c28d5959114974104af8",
+                "url": "https://api.github.com/repos/popovserhii/zfc-tab/zipball/e4374f12d69bcbbac234e1cf3bff322008ceb2f3",
+                "reference": "e4374f12d69bcbbac234e1cf3bff322008ceb2f3",
                 "shasum": ""
             },
             "require": {
@@ -3051,7 +3095,7 @@
                 "source": "https://github.com/popovserhii/zfc-tab/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-tab/issues"
             },
-            "time": "2017-09-08 08:33:33"
+            "time": "2017-09-17 16:49:42"
         },
         {
             "name": "popov/zfc-user",
@@ -3059,12 +3103,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/popovserhii/zfc-user.git",
-                "reference": "3028346b2a4fdf6b9cb7fa02fb01249f7f1b7bae"
+                "reference": "5e9f1bd1ce93c8aff7f974528ae5d81c813567c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/popovserhii/zfc-user/zipball/3028346b2a4fdf6b9cb7fa02fb01249f7f1b7bae",
-                "reference": "3028346b2a4fdf6b9cb7fa02fb01249f7f1b7bae",
+                "url": "https://api.github.com/repos/popovserhii/zfc-user/zipball/5e9f1bd1ce93c8aff7f974528ae5d81c813567c2",
+                "reference": "5e9f1bd1ce93c8aff7f974528ae5d81c813567c2",
                 "shasum": ""
             },
             "require": {
@@ -3095,7 +3139,7 @@
                 "source": "https://github.com/popovserhii/zfc-user/tree/master",
                 "issues": "https://github.com/popovserhii/zfc-user/issues"
             },
-            "time": "2017-09-14 09:32:53"
+            "time": "2017-09-17 16:50:37"
         },
         {
             "name": "psr/cache",
@@ -3852,12 +3896,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "d0fc29c14e486837da0f0734c3388a5761dd8ae4"
+                "reference": "90e1e8682abc51dbf679ef3cdc304424a3075f2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/d0fc29c14e486837da0f0734c3388a5761dd8ae4",
-                "reference": "d0fc29c14e486837da0f0734c3388a5761dd8ae4",
+                "url": "https://api.github.com/repos/symfony/console/zipball/90e1e8682abc51dbf679ef3cdc304424a3075f2f",
+                "reference": "90e1e8682abc51dbf679ef3cdc304424a3075f2f",
                 "shasum": ""
             },
             "require": {
@@ -3866,13 +3910,13 @@
                 "symfony/polyfill-mbstring": "~1.0"
             },
             "conflict": {
-                "symfony/dependency-injection": "<3.3",
+                "symfony/dependency-injection": "<3.4",
                 "symfony/process": "<3.3"
             },
             "require-dev": {
                 "psr/log": "~1.0",
                 "symfony/config": "~3.3|~4.0",
-                "symfony/dependency-injection": "~3.3|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
                 "symfony/event-dispatcher": "~2.8|~3.0|~4.0",
                 "symfony/lock": "~3.4|~4.0",
                 "symfony/process": "~3.3|~4.0"
@@ -3913,7 +3957,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-09-15 10:12:22"
+            "time": "2017-09-19 09:28:48"
         },
         {
             "name": "symfony/debug",
@@ -4085,12 +4129,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "870c99622a14a57811816dc06843bcb60dd4f4c3"
+                "reference": "a0e15688972f012156cf1ffa076fe1203bce6bc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/870c99622a14a57811816dc06843bcb60dd4f4c3",
-                "reference": "870c99622a14a57811816dc06843bcb60dd4f4c3",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/a0e15688972f012156cf1ffa076fe1203bce6bc9",
+                "reference": "a0e15688972f012156cf1ffa076fe1203bce6bc9",
                 "shasum": ""
             },
             "require": {
@@ -4135,7 +4179,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-09-15 10:12:22"
+            "time": "2017-09-17 10:10:45"
         },
         {
             "name": "thadafinser/zfc-datagrid",
@@ -6436,12 +6480,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-navigation.git",
-                "reference": "6c879f8ce60df2b93b2617aaff536acf1e293862"
+                "reference": "1f9f22ec93b2caecafdc7f5b062de1feb02ddc0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-navigation/zipball/6c879f8ce60df2b93b2617aaff536acf1e293862",
-                "reference": "6c879f8ce60df2b93b2617aaff536acf1e293862",
+                "url": "https://api.github.com/repos/zendframework/zend-navigation/zipball/1f9f22ec93b2caecafdc7f5b062de1feb02ddc0b",
+                "reference": "1f9f22ec93b2caecafdc7f5b062de1feb02ddc0b",
                 "shasum": ""
             },
             "require": {
@@ -6496,7 +6540,7 @@
                 "navigation",
                 "zf2"
             ],
-            "time": "2017-03-22 20:32:34"
+            "time": "2017-09-21 16:30:35"
         },
         {
             "name": "zendframework/zend-paginator",
@@ -7978,7 +8022,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2017-09-15T09:49:58+00:00"
+            "time": "2017-09-15 09:49:58"
         },
         {
             "name": "phing/phing",
@@ -8074,7 +8118,7 @@
                 "task",
                 "tool"
             ],
-            "time": "2017-09-14T14:34:30+00:00"
+            "time": "2017-09-14 14:34:30"
         }
     ],
     "aliases": [],
@@ -8104,6 +8148,7 @@
         "popov/zfc-layout": 20,
         "popov/zfc-grid": 20,
         "popov/zfc-tab": 20,
+        "popov/zfc-mail": 20,
         "popov/zfc-file": 20,
         "popov/zfc-file-upload": 20,
         "popov/cyta": 20,

@@ -15,6 +15,7 @@
 namespace Popov\Inquiry\Controller;
 
 use Dompdf\Dompdf;
+use Popov\Student\Model\Student;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use ZfcDatagrid\Datagrid;
@@ -106,6 +107,19 @@ class InquiryController extends AbstractActionController
     {
         $route = $this->getEvent()->getRouteMatch();
         $params = $route->getParams();
+
+        if (!$this->user()->isAdmin()) {
+            $service = $this->getInquiryService();
+            $om = $service->getObjectManager();
+            $inquiry = $service->find($id = (int) $route->getParam('id'));
+            $student = $om->getRepository(Student::class)->findOneBy(['inquiry' => $inquiry, 'user' => $this->user()->current()]);
+            if (!$student) {
+                $msg = 'You don\'t have permission for view this page. This accident was reported to administrator';
+                $this->flashMessenger()->addErrorMessage($msg);
+
+                return false;
+            }
+        }
 
         $params['action'] = 'edit';
         $editVm = $this->forward()->dispatch($route->getParam('controller'), $params);

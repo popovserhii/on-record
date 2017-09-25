@@ -9,7 +9,7 @@ class Module
     {
         $eventManager = $e->getTarget()->getEventManager();
         $serviceManager = $e->getApplication()->getServiceManager();
-        //$eventManager->attach((new Listener\HelloListener())->setServiceLocator($serviceManager));
+        $eventManager->attach((new Listener\MailListener())->setServiceLocator($serviceManager));
     }
 
     public function getConfig()
